@@ -38,14 +38,14 @@ export const useGlobalStore = create<State>()(
       },
       formSliderListConfig: {
         [defaultSliderKey]: {
-          cpu: [100, 200, 500, 1000, 2000, 3000, 4000, 8000],
-          memory: [64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384]
+          cpu: [100, 200, 500, 1000, 2000, 3000, 4000, 8000, 16000, 32000, 64000, 128000],
+          memory: [64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288]
         }
       },
       initFormSliderList(res) {
         if (!res) return;
         set((state) => {
-          state.formSliderListConfig = res;
+          // state.formSliderListConfig = res;
         });
       }
     }))
