@@ -49,6 +49,9 @@ const CustomAccessModal = ({
       if (!val) {
         return onSuccess('');
       }
+      if (val.endsWith(SEALOS_DOMAIN)) {
+        return val;
+      }
       await postAuthCname({
         publicDomain: completePublicDomain,
         customDomain: val
