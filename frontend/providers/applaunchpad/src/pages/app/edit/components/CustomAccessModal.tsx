@@ -55,6 +55,9 @@ const CustomAccessModal = ({
       if (!val) {
         return onSuccess('');
       }
+      if (val.endsWith(domain)) {
+        return val;
+      }
       await postAuthCname({
         publicDomain: completePublicDomain,
         customDomain: val
