@@ -426,10 +426,10 @@ const Form = ({
               <FormControl isInvalid={!!errors.storage} w={'500px'}>
                 <Flex alignItems={'center'}>
                   <Label w={100}>{t('Storage')}</Label>
-                  <MyTooltip label={`${t('Storage Range')}${minStorage}~300 Gi`}>
+                  <MyTooltip label={`${t('Storage Range')}${minStorage}~1000000 Gi`}>
                     <NumberInput
                       w={'180px'}
-                      max={300}
+                      max={1000000}
                       min={minStorage}
                       step={1}
                       position={'relative'}
@@ -446,13 +446,13 @@ const Form = ({
                             message: `${t('Storage Min')}${minStorage} Gi`
                           },
                           max: {
-                            value: 300,
-                            message: `${t('Storage Max')}300 Gi`
+                            value: 1000000,
+                            message: `${t('Storage Max')}1000000 Gi`
                           },
                           valueAsNumber: true
                         })}
                         min={minStorage}
-                        max={300}
+                        max={1000000}
                         borderRadius={'md'}
                         borderColor={'#E8EBF0'}
                         bg={'#F7F8FA'}
